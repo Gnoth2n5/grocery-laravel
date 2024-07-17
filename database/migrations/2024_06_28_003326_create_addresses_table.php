@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('recipent_name');
-            $table->string('recipent_phone', 12);
+            $table->string('recipent_phone', 20);
             $table->string('commune');
             $table->string('district');
             $table->string('city');
             $table->string('detail');
             $table->timestamps();
-    
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
